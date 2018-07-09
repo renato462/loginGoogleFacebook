@@ -73,6 +73,9 @@
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
+                        <a class="btn btn-primary" href="{{ route('social.auth', 'facebook') }}">
+                            Facebook
+                        </a>
                     @endauth
                 </div>
             @endif
