@@ -27,7 +27,17 @@
                     <div class="panel-heading">Dashboard</div>
 
                     <div class="panel-body">
-                        You are logged in!
+                        You are logged in! Renato
+                    </div>
+                    <div class="panel-body">
+                        ren
+                        <form action="{{ route('logout') }}" method="POST" >
+
+                            <button class="btn" href="{{route('logout')}}">
+                                Logout
+                            </button>
+                            @csrf
+                        </form>
                     </div>
                 </div>
             </div>

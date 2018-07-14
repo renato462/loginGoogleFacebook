@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/loginInspinia','auth.loginInspinia');
+
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
