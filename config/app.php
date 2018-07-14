@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Laraveles\Spanish\SpanishServiceProvider::class,
 
         /*
          * Application Service Providers...
