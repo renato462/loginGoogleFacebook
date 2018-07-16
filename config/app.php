@@ -152,7 +152,7 @@ return [
          */
         Laravel\Socialite\SocialiteServiceProvider::class,
         Laraveles\Spanish\SpanishServiceProvider::class,
-
+        Barryvdh\Debugbar\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -213,6 +213,7 @@ return [
 
         /*Pakage provider install*/
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 

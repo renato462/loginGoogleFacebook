@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sign in Form with Social Login Buttons</title>
+    <title> {{trans('app.title_login')}}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -94,13 +94,14 @@
 
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                        name="email" value="{{ old('email') }}" required="autofocus"
-                       placeholder="{{ __('E-Mail Address') }}">
-                @if ($errors->has('email'))
-                    <span class="invalid-feedback" role="alert">
+                     placeholder="{{ __('E-Mail Address') }}">
+
+            </div>
+            @if ($errors->has('email'))
+                <span class="alert-danger" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                @endif
-            </div>
+            @endif
         </div>
         <div class="form-group">
             <div class="input-group">
@@ -109,14 +110,12 @@
                 <input id="password" type="password"
                        class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password"
                        placeholder="{{ __('Password') }}" required="autofocus">
-
-                @if ($errors->has('password'))
-                    <span class="invalid-feedback" role="alert">
+            </div>
+            @if ($errors->has('password'))
+                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                @endif
-
-            </div>
+            @endif
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-block login-btn">{{ __('Login') }}</button>
